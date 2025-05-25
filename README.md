@@ -1,12 +1,50 @@
-# React + Vite
+# Integrantes
+- Mauricio Tomás Zalazar – [@mauriciozalazar29](https://github.com/mauriciozalazar29)
+- Mariano Gabriel Gutiérrez – [@marianogutierrez2008](https://github.com/marianogutierrez2008)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Gestión de Alumnos – Trabajo Práctico N° 5
 
-Currently, two official plugins are available:
+Aplicación web desarrollada en **React + Vite** para la gestión de alumnos. Permite agregar, editar, eliminar y visualizar información detallada de cada alumno. Está estructurada en componentes funcionales, aplicando eventos en React y navegación entre vistas con React Router DOM.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Tecnologías
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- React Router DOM
+- JavaScript
+- JSX
+---
+
+## ⚙️ Características Técnicas
+
+Se aplican los siguientes hooks de React:
+
+- `useState`
+- `useEffect`
+- `useMemo`
+- `useCallback`
+
+Además, se manejan:
+
+- Eventos sintéticos (`onClick`, `onChange`, `onSubmit`, etc.)
+- Eventos nativos con `addEventListener` cuando corresponde
+- Eventos personalizados entre componentes a través de props
+
+---
+
+## 📚 Funcionalidades
+
+- 🏠 Página de inicio (Home)
+- 📋 Lista de alumnos (en formato tabla)
+- 👁️ Vista de detalles del alumno
+- ➕ Formulario para agregar alumno
+- ✏️ Formulario para editar alumno
+- ❌ Eliminación con confirmación
+- 🔗 Navegación entre vistas con React Router
+- 📌 Rutas dinámicas (`/alumnos/:id`, `/alumnos/:id/editar`)
+- 🔄 Redirección automática luego de acciones
+
+---
+
