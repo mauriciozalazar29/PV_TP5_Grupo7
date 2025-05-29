@@ -3,7 +3,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom'
 import NavBar from './components/NavBar'
 import Home from './views/Home'
 import ListaAlumnos from './views/ListaAlumnos'
-//import NuevoAlumno from './views/NuevoAlumno'
+import NuevoAlumno from './views/NuevoAlumno'
 //import EditarAlumno from './views/EditarAlumno'
 import DetalleAlumno from './views/DetalleAlumno'
 import AcercaDe from './views/AcercaDe'
@@ -45,6 +45,18 @@ const App = () => {
             />
           }
         />
+        <Route
+          path="/alumnos/nuevo"
+          element={
+            <NuevoAlumno
+              alumnos={alumnos}
+              setAlumnos={setAlumnos}
+              navigate={navigate}
+            />
+          }
+        />
+
+
         <Route
           path="/alumnos/:id"
           element={<DetalleAlumno alumnos={alumnos} />}
