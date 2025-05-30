@@ -15,6 +15,8 @@ const EditarAlumno = ({ alumnos, setAlumnos, navigate }) => {
     telefono: '',
   })
 
+  const [mensaje, setMensaje] = useState('')
+
   useEffect(() => {
     if (alumnoOriginal) {
       setForm(alumnoOriginal)
@@ -22,7 +24,7 @@ const EditarAlumno = ({ alumnos, setAlumnos, navigate }) => {
   }, [alumnoOriginal])
 
   if (!alumnoOriginal) {
-    return <p>Alumno no encontrado</p>
+    return <div className="alert alert-danger">Alumno no encontrado.</div>
   }
 
   const handleChange = (e) => {
@@ -30,10 +32,16 @@ const EditarAlumno = ({ alumnos, setAlumnos, navigate }) => {
       ...form,
       [e.target.name]: e.target.value,
     })
+    setMensaje('')
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
+
+    if (!form.nombre || !form.apellido) {
+      setMensaje('Los campos Nombre y Apellido son obligatorios.')
+      return
+    }
 
     setAlumnos(
       alumnos.map(a => (a.id === id ? form : a))
@@ -43,39 +51,48 @@ const EditarAlumno = ({ alumnos, setAlumnos, navigate }) => {
   }
 
   return (
-    <div>
-      <h2>Editar Alumno</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
-          LU:
-          <input type="text" name="id" value={form.id} onChange={handleChange}  />
-        </label><br />
-        <label>
-          Nombre:
-          <input type="text" name="nombre" value={form.nombre} onChange={handleChange} />
-        </label><br />
-        <label>
-          Apellido:
-          <input type="text" name="apellido" value={form.apellido} onChange={handleChange} />
-        </label><br />
-        <label>
-          Curso:
-          <input type="text" name="curso" value={form.curso} onChange={handleChange} />
-        </label><br />
-        <label>
-          Email:
-          <input type="email" name="email" value={form.email} onChange={handleChange} />
-        </label><br />
-        <label>
-          Domicilio:
-          <input type="text" name="domicilio" value={form.domicilio} onChange={handleChange} />
-        </label><br />
-        <label>
-          Teléfono:
-          <input type="text" name="telefono" value={form.telefono} onChange={handleChange} />
-        </label><br />
-        <button type="submit">Guardar Cambios</button>
-      </form>
+    <div className="card shadow-sm">
+      <div className="card-header bg-warning">
+        <h4 className="mb-0">Editar Alumno</h4>
+      </div>
+      <div className="card-body">
+        {mensaje && <div className="alert alert-warning">{mensaje}</div>}
+
+        <form onSubmit={handleSubmit}>
+          <div className="row">
+            <div className="mb-3 col-md-6">
+              <label className="form-label">LU</label>
+              <input type="text" name="id" className="form-control" value={form.id} onChange={handleChange} />
+            </div>
+            <div className="mb-3 col-md-6">
+              <label className="form-label">Nombre</label>
+              <input type="text" name="nombre" className="form-control" value={form.nombre} onChange={handleChange} />
+            </div>
+            <div className="mb-3 col-md-6">
+              <label className="form-label">Apellido</label>
+              <input type="text" name="apellido" className="form-control" value={form.apellido} onChange={handleChange} />
+            </div>
+            <div className="mb-3 col-md-6">
+              <label className="form-label">Curso</label>
+              <input type="text" name="curso" className="form-control" value={form.curso} onChange={handleChange} />
+            </div>
+            <div className="mb-3 col-md-6">
+              <label className="form-label">Email</label>
+              <input type="email" name="email" className="form-control" value={form.email} onChange={handleChange} />
+            </div>
+            <div className="mb-3 col-md-6">
+              <label className="form-label">Domicilio</label>
+              <input type="text" name="domicilio" className="form-control" value={form.domicilio} onChange={handleChange} />
+            </div>
+            <div className="mb-3 col-md-6">
+              <label className="form-label">Teléfono</label>
+              <input type="text" name="telefono" className="form-control" value={form.telefono} onChange={handleChange} />
+            </div>
+          </div>
+
+          <button type="submit" className="btn btn-success">Guardar Cambios</button>
+        </form>
+      </div>
     </div>
   )
 }

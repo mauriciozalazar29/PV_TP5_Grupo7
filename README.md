@@ -15,6 +15,7 @@ Aplicación web desarrollada en **React + Vite** para la gestión de alumnos. Pe
 - React Router DOM
 - JavaScript
 - JSX
+- Bootstrap
 ---
 
 ## ⚙️ Características Técnicas
