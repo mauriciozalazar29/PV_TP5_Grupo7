@@ -21,7 +21,7 @@ const ListaAlumnos = ({ alumnos, onEliminar }) => {
           Lista de Alumnos
         </h4>
         <Link to="/alumnos/nuevo" className="btn btn-light btn-sm">
-          <i className="bi bi-plus-lg me-1"></i> Nuevo
+          <i className="bi bi-plus-lg me-1"></i>
         </Link>
       </div>
       <div className="card-body">
@@ -49,7 +49,7 @@ const ListaAlumnos = ({ alumnos, onEliminar }) => {
                     <td>{alumno.nombre}</td>
                     <td>{alumno.apellido}</td>
                     <td>
-                      <span className="badge bg-info text-dark">{alumno.curso}</span>
+                      <span className>{alumno.curso}</span>
                     </td>
                     <td className="text-end">
                       {idAEliminar === alumno.id ? (
@@ -63,12 +63,12 @@ const ListaAlumnos = ({ alumnos, onEliminar }) => {
                         </div>
                       ) : (
                         <div className="d-flex gap-2 justify-content-end">
-                          <Link to={`/alumnos/${alumno.id}`} className="btn btn-sm btn-outline-info" title="Ver detalles">
-                            <i className="bi bi-eye-fill"></i>
-                          </Link>
-                          <Link to={`/alumnos/${alumno.id}/editar`} className="btn btn-sm btn-outline-warning" title="Editar">
-                            <i className="bi bi-pencil-fill"></i>
-                          </Link>
+                        <Link to={`/alumnos/${alumno.id}`} className="btn btn-sm btn-outline-primary" title="Ver detalles">
+                          <i className="bi bi-eye-fill"></i>
+                        </Link>
+                        <Link to={`/alumnos/${alumno.id}/editar`} className="btn btn-sm btn-outline-dark" title="Editar">
+                          <i className="bi bi-pencil-fill"></i>
+                        </Link>
                           <button
                             onClick={() => setIdAEliminar(alumno.id)}
                             className="btn btn-sm btn-outline-danger"

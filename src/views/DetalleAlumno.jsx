@@ -10,13 +10,13 @@ const DetalleAlumno = ({ alumnos }) => {
 
   return (
     <div className="card shadow-sm">
-      <div className="card-header bg-info text-white d-flex justify-content-between align-items-center">
+       <div className="card-header bg-primary text-white d-flex justify-content-between align-items-center">
         <h4 className="mb-0">
           <i className="bi bi-person-vcard-fill me-2"></i>
           Detalle del Alumno
         </h4>
-        <Link to="/alumnos" className="btn btn-outline-light btn-sm">
-          <i className="bi bi-arrow-left"></i> Volver
+        <Link to="/alumnos" className="btn btn-light btn-sm">
+           <i className="bi bi-arrow-left"></i>
         </Link>
       </div>
       <div className="card-body">

@@ -13,16 +13,53 @@ const App = () => {
   const navigate = useNavigate()
 
   const [alumnos, setAlumnos] = useState([
-    {
-      id: 'APU005822',
-      nombre: 'Mauricio',
-      apellido: 'Zalazar',
-      curso: 'Tercero',
-      email: 'mauriitomas@mail.com',
-      domicilio: 'Av. Patricias Argentinas 29',
-      telefono: '3885060217',
-    },
-  ])
+  {
+    id: 'APU005822',
+    nombre: 'Mauricio',
+    apellido: 'Zalazar',
+    curso: 'Tercero',
+    email: 'mauriitomas@mail.com',
+    domicilio: 'Av. Patricias Argentinas 29',
+    telefono: '3885060217',
+  },
+  {
+    id: 'APU005823',
+    nombre: 'Mariano',
+    apellido: 'Gutiérrez',
+    curso: 'Primero',
+    email: 'marianog@mail.com',
+    domicilio: 'Av. Libertad 29',
+    telefono: '3882325154',
+  },
+  {
+    id: 'APU005824',
+    nombre: 'Oscar',
+    apellido: 'Palavecino',
+    curso: 'Quinto',
+    email: 'oscarpalavecino@mail.com',
+    domicilio: 'Belgrano 321',
+    telefono: '3884119988',
+  },
+  {
+    id: 'APU005825',
+    nombre: 'Lazaro',
+    apellido: 'Caballero',
+    curso: 'Cuarto',
+    email: 'lazaroexequiel@mail.com',
+    domicilio: 'San Martín 105',
+    telefono: '3885122233',
+  },
+  {
+    id: 'APU005826',
+    nombre: 'Christian',
+    apellido: 'Herrera',
+    curso: 'Segundo',
+    email: 'christianmataco@mail.com',
+    domicilio: 'Lavalle 12',
+    telefono: '3883014789',
+  }
+])
+
 
   // Eliminar alumno por ID
   const eliminarAlumno = (id) => {

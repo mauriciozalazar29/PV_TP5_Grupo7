@@ -5,7 +5,7 @@ const NavBar = () => (
     <div className="container">
       <Link className="navbar-brand fw-bold" to="/">
         <i className="bi bi-people-fill me-2"></i>
-        Gestión Alumnos
+        BRManager
       </Link>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span className="navbar-toggler-icon"></span>

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const NuevoAlumno = ({ alumnos, setAlumnos, navigate }) => {
   const [form, setForm] = useState({
@@ -45,9 +46,12 @@ const NuevoAlumno = ({ alumnos, setAlumnos, navigate }) => {
 
   return (
     <div className="card shadow-sm">
-      <div className="card-header bg-success text-white">
-        <h4 className="mb-0">Agregar Nuevo Alumno</h4>
-      </div>
+        <div className="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+          <h4 className="mb-0">
+            <i className="bi bi-person-plus-fill me-2"></i> {/* Icono agregado */}
+            Agregar Nuevo Alumno
+          </h4>
+        </div>
       <div className="card-body">
         {mensaje && <div className="alert alert-warning">{mensaje}</div>}
 
@@ -65,9 +69,22 @@ const NuevoAlumno = ({ alumnos, setAlumnos, navigate }) => {
               <label className="form-label">Apellido</label>
               <input type="text" name="apellido" className="form-control" value={form.apellido} onChange={handleChange} required />
             </div>
-            <div className="mb-3 col-md-6">
+            <div className="col-md-6 mb-3">
               <label className="form-label">Curso</label>
-              <input type="text" name="curso" className="form-control" value={form.curso} onChange={handleChange} />
+              <select
+                name="curso"
+                className="form-select"
+                value={form.curso}
+                onChange={handleChange}
+                required
+              >
+                <option value="">Seleccionar curso</option>
+                <option value="Primero">Primero</option>
+                <option value="Segundo">Segundo</option>
+                <option value="Tercero">Tercero</option>
+                <option value="Tercero">Cuarto</option>
+                <option value="Tercero">Quinto</option>
+                </select>
             </div>
             <div className="mb-3 col-md-6">
               <label className="form-label">Email</label>
@@ -81,9 +98,15 @@ const NuevoAlumno = ({ alumnos, setAlumnos, navigate }) => {
               <label className="form-label">Teléfono</label>
               <input type="text" name="telefono" className="form-control" value={form.telefono} onChange={handleChange} />
             </div>
-          </div>
-
-          <button type="submit" className="btn btn-primary">Guardar Alumno</button>
+            </div>
+            <div className="d-flex justify-content-between mt-3">
+              <button type="submit" className="btn btn-success" title="Guardar Alumno">
+                <i className="bi bi-check-circle-fill fs-4"></i>
+              </button>
+              <Link to="/alumnos" className="btn btn-secondary" title="Volver a la lista">
+                <i className="bi bi-arrow-left-circle-fill fs-4"></i>
+              </Link>
+            </div>
         </form>
       </div>
     </div>
