@@ -43,11 +43,21 @@ const EditarAlumno = ({ alumnos, setAlumnos, navigate }) => {
       return
     }
 
+    // Valida que no exista otro alumno con el mismo ID
+    const existeOtroConMismoId = alumnos.some(
+      (a) => a.id === form.id && a.id !== id
+    )
+
+    if (existeOtroConMismoId) {
+      setMensaje('Ya existe otro alumno con ese LU.')
+      return
+    }
+
     setAlumnos(
       alumnos.map(a => (a.id === id ? form : a))
     )
 
-    navigate('/alumnos')
+   navigate('/alumnos', { state: { mensaje: 'Alumno editado correctamente.' } })
   }
 
   return (
@@ -103,13 +113,13 @@ const EditarAlumno = ({ alumnos, setAlumnos, navigate }) => {
               <label className="form-label">Teléfono</label>
               <input type="text" name="telefono" className="form-control" value={form.telefono} onChange={handleChange} />
             </div>
-            <div className="d-flex justify-content-between mt-3">
-              <button type="submit" className="btn btn-success" title="Guardar Alumno">
-                <i className="bi bi-check-circle-fill fs-4"></i>
-              </button>
-              <Link to="/alumnos" className="btn btn-secondary" title="Volver a la lista">
-                <i className="bi bi-arrow-left-circle-fill fs-4"></i>
+             <div className="d-flex justify-content-end gap-4 mt-4">
+              <Link to="/alumnos" className="btn btn-secondary">
+                <i className="bi bi-arrow-left me-1.5" title="Cancelar"></i>
               </Link>
+              <button type="submit" className="btn btn-primary">
+                <i className="bi bi-check-circle-fill me-1.5"  title="Guardar Cambios"></i>
+              </button>
             </div>
           </div>
         </form>

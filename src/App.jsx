@@ -14,7 +14,7 @@ const App = () => {
 
   const [alumnos, setAlumnos] = useState([
   {
-    id: 'APU005822',
+    id: 'INF005822',
     nombre: 'Mauricio',
     apellido: 'Zalazar',
     curso: 'Tercero',
@@ -32,7 +32,7 @@ const App = () => {
     telefono: '3882325154',
   },
   {
-    id: 'APU005824',
+    id: 'MIN005824',
     nombre: 'Oscar',
     apellido: 'Palavecino',
     curso: 'Quinto',
@@ -41,7 +41,7 @@ const App = () => {
     telefono: '3884119988',
   },
   {
-    id: 'APU005825',
+    id: 'QUI005825',
     nombre: 'Lazaro',
     apellido: 'Caballero',
     curso: 'Cuarto',
@@ -50,7 +50,7 @@ const App = () => {
     telefono: '3885122233',
   },
   {
-    id: 'APU005826',
+    id: 'IND005826',
     nombre: 'Christian',
     apellido: 'Herrera',
     curso: 'Segundo',
@@ -60,14 +60,11 @@ const App = () => {
   }
 ])
 
-
   // Eliminar alumno por ID
   const eliminarAlumno = (id) => {
-    const confirmacion = confirm('¿Estás seguro de eliminar este alumno?')
-    if (confirmacion) {
-      setAlumnos(alumnos.filter(a => a.id !== id))
-    }
-  }
+  setAlumnos(alumnos.filter(a => a.id !== id))
+}
+
 
   return (
     <div className="d-flex flex-column min-vh-100">
@@ -94,11 +91,42 @@ const App = () => {
           <Route path="/acerca" element={<AcercaDe />} />
         </Routes>
       </main>
-      <footer className="bg-dark text-white text-center py-3">
-        <div className="container">
-          <small>&copy; 2025 - Grupo 7 - Programación Visual | Facultad de Ingeniería</small>
-        </div>
-      </footer>
+          <footer className="bg-dark text-white pt-4 pb-3 mt-auto">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-6 mb-3">
+                  <h5 className="fw-bold mb-3">
+                    <i className="bi bi-mortarboard-fill me-2"></i>EduManager
+                  </h5>
+                  <p className="text mb-3">Plataforma de gestión académica para instituciones modernas.</p>
+                  <p className="mb-1.5">
+                    <i className="bi bi-whatsapp me-2"></i>
+                    WhatsApp: <a href="https://wa.me/3884708223" className="text-decoration-none text-info">3884708223</a>
+                  </p>
+                  <p className="mb-1.5">
+                    <i className="bi bi-envelope-fill me-2"></i>
+                    Correo oficial: <a href="mailto:virtual@edumanager.com" className="text-decoration-none text-info">virtual@edumanager.com</a>
+                  </p>
+                  <p className="mb-1.5">
+                    <i className="bi bi-envelope me-2"></i>
+                    Correo secundario: <a href="mailto:cursos@edumanager.com" className="text-decoration-none text-info">cursos@edumanager.com</a>
+                  </p>
+                </div>
+
+                <div className="col-md-6 text-md-end d-flex flex-column justify-content-between">
+                  <div className="mb-3">
+                    <a href="#" target="_blank" rel="noopener noreferrer" className="text-white me-3"><i className="bi bi-facebook fs-5"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" className="text-white me-3"><i className="bi bi-instagram fs-5"></i></a>
+                    <a href="https://www.youtube.com/@mauriiciozalazar1138" target="_blank" rel="noopener noreferrer" className="text-white me-3"><i className="bi bi-youtube fs-5"></i></a>
+                    <a href="https://www.linkedin.com/in/mauricio-tomas-zalazar-79a735354/" target="_blank" rel="noopener noreferrer" className="text-white"><i className="bi bi-linkedin fs-5"></i></a>
+                  </div>
+                  <div className="text small">
+                    &copy; {new Date().getFullYear()} EduManager — Todos los derechos reservados
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
     </div>
   )
 }
