@@ -84,7 +84,7 @@ const ListaAlumnos = ({ alumnos, onEliminar }) => {
                         </div>
                       ) : (
                         <div className="d-flex gap-2 justify-content-end">
-                          <Link to={`/alumnos/${alumno.id}`} className="btn btn-sm btn-outline-primary" title="Ver detalles">
+                          <Link to={`/alumnos/${alumno.id}`} className="btn btn-sm btn-outline-primary" title="Ver">
                             <i className="bi bi-eye-fill"></i>
                           </Link>
                           <Link to={`/alumnos/${alumno.id}/editar`} className="btn btn-sm btn-outline-dark" title="Editar">

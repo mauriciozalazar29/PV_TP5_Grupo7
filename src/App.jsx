@@ -91,43 +91,67 @@ const App = () => {
           <Route path="/acerca" element={<AcercaDe />} />
         </Routes>
       </main>
-          <footer className="bg-dark text-white pt-4 pb-3 mt-auto">
-            <div className="container">
-              <div className="row">
-                <div className="col-md-6 mb-3">
-                  <h5 className="fw-bold mb-3">
-                    <i className="bi bi-mortarboard-fill me-2"></i>EduManager
-                  </h5>
-                  <p className="text mb-3">Plataforma de gestión académica para instituciones modernas.</p>
-                  <p className="mb-1.5">
-                    <i className="bi bi-whatsapp me-2"></i>
-                    WhatsApp: <a href="https://wa.me/3884708223" className="text-decoration-none text-info">3884708223</a>
-                  </p>
-                  <p className="mb-1.5">
-                    <i className="bi bi-envelope-fill me-2"></i>
-                    Correo oficial: <a href="mailto:virtual@edumanager.com" className="text-decoration-none text-info">virtual@edumanager.com</a>
-                  </p>
-                  <p className="mb-1.5">
-                    <i className="bi bi-envelope me-2"></i>
-                    Correo secundario: <a href="mailto:cursos@edumanager.com" className="text-decoration-none text-info">cursos@edumanager.com</a>
-                  </p>
-                </div>
-
-                <div className="col-md-6 text-md-end d-flex flex-column justify-content-between">
-                  <div className="mb-3">
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="text-white me-3"><i className="bi bi-facebook fs-5"></i></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="text-white me-3"><i className="bi bi-instagram fs-5"></i></a>
-                    <a href="https://www.youtube.com/@mauriiciozalazar1138" target="_blank" rel="noopener noreferrer" className="text-white me-3"><i className="bi bi-youtube fs-5"></i></a>
-                    <a href="https://www.linkedin.com/in/mauricio-tomas-zalazar-79a735354/" target="_blank" rel="noopener noreferrer" className="text-white"><i className="bi bi-linkedin fs-5"></i></a>
-                  </div>
-                  <div className="text small">
-                    &copy; {new Date().getFullYear()} EduManager — Todos los derechos reservados
-                  </div>
+        <footer className="bg-dark text-white pt-5 pb-3 mt-auto">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-4 mb-5">
+                <h4 className="fw-bold mb-3">
+                  <i className="bi bi-mortarboard-fill me-2 text-info"></i>EduManager
+                </h4>
+                <p className="text-white-50 text-decoration-none">
+                  Plataforma de gestión académica que impulsa el futuro de la educación moderna.
+                </p>
+                <div className="d-flex gap-3 mt-3">
+                  <a href="https://www.facebook.com/fiunju/" target="_blank" rel="noreferrer" className="text-white-50 fs-5"><i className="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/fiunju/" target="_blank" rel="noreferrer"  className="text-white-50 fs-5"><i className="bi bi-instagram"></i></a>
+                  <a href="https://www.youtube.com/@mauriiciozalazar1138" target="_blank" rel="noreferrer" className="text-white-50 fs-5"><i className="bi bi-youtube"></i></a>
+                  <a href="https://www.linkedin.com/in/mauricio-tomas-zalazar-79a735354/" target="_blank" rel="noreferrer" className="text-white-50 fs-5"><i className="bi bi-linkedin"></i></a>
                 </div>
               </div>
+              <div className="col-lg-4 mb-4">
+                <h6 className="text-uppercase text-white fw-semibold mb-3">Contacto</h6>
+                <ul className="list-unstyled text">
+                  <li className="mb-2">
+                    <i className="bi bi-whatsapp me-2 text-success"></i>
+                    <a href="https://wa.me/3884708223" className="text-white-50 text-decoration-none">+54 388 470 8223</a>
+                  </li>
+                  <li className="mb-2">
+                    <i className="bi bi-envelope-fill me-2 text-info"></i>
+                    <a href="mailto:virtual@edumanager.com" className="text-white-50 text-decoration-none">virtual@edumanager.com</a>
+                  </li>
+                  <li className="mb-2">
+                    <i className="bi bi-envelope-fill me-2 text-info"></i>
+                    <a href="mailto:virtual@edumanager.com" className="text-white-50 text-decoration-none">info@edumanager.com</a>
+                  </li>
+                </ul>
+              </div>
+              <div className="col-lg-4 mb-4">
+                <h6 className="text-uppercase text-white fw-semibold mb-3">Enlaces rápidos</h6>
+                <ul className="list-unstyled text">
+                  <li className="mb-2">
+                    <i className="bi bi-house me-2"></i>
+                    <a href="/" className="text-white-50 text-decoration-none">Inicio</a>
+                  </li>
+                  <li className="mb-2">
+                    <i className="bi bi-people me-2"></i>
+                    <a href="/alumnos" className="text-white-50 text-decoration-none">Alumnos</a>
+                  </li>
+                  <li className="mb-2">
+                    <i className="bi bi-info-circle me-2"></i>
+                    <a href="/acerca" className="text-white-50 text-decoration-none">Acerca de</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </footer>
-    </div>
+            <hr className="border-secondary" />
+              <div className="d-flex justify-content-end pt-2">
+              <p className="mb-2 mb-md-0 text-white-50 small">
+                © {new Date().getFullYear()} EduManager. Todos los derechos reservados.
+              </p>
+            </div>
+          </div>
+        </footer>
+  </div>
   )
 }
 
