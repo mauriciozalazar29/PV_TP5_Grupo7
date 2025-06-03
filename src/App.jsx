@@ -102,8 +102,8 @@ const App = () => {
                   Plataforma de gestión académica que impulsa el futuro de la educación moderna.
                 </p>
                 <div className="d-flex gap-3 mt-3">
-                  <a href="#" className="text-white-50 fs-5"><i className="bi bi-facebook"></i></a>
-                  <a href="#" className="text-white-50 fs-5"><i className="bi bi-instagram"></i></a>
+                  <a href="https://www.facebook.com/fiunju/" target="_blank" rel="noreferrer" className="text-white-50 fs-5"><i className="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/fiunju/" target="_blank" rel="noreferrer"  className="text-white-50 fs-5"><i className="bi bi-instagram"></i></a>
                   <a href="https://www.youtube.com/@mauriiciozalazar1138" target="_blank" rel="noreferrer" className="text-white-50 fs-5"><i className="bi bi-youtube"></i></a>
                   <a href="https://www.linkedin.com/in/mauricio-tomas-zalazar-79a735354/" target="_blank" rel="noreferrer" className="text-white-50 fs-5"><i className="bi bi-linkedin"></i></a>
                 </div>
@@ -121,7 +121,7 @@ const App = () => {
                   </li>
                   <li className="mb-2">
                     <i className="bi bi-envelope-fill me-2 text-info"></i>
-                    <a href="mailto:virtual@edumanager.com" className="text-white-50 text-decoration-none">cursos@edumanager.com</a>
+                    <a href="mailto:virtual@edumanager.com" className="text-white-50 text-decoration-none">info@edumanager.com</a>
                   </li>
                 </ul>
               </div>
@@ -144,7 +144,7 @@ const App = () => {
               </div>
             </div>
             <hr className="border-secondary" />
-            <div className="d-flex justify-content-between flex-column flex-md-row align-items-center pt-2">
+              <div className="d-flex justify-content-end pt-2">
               <p className="mb-2 mb-md-0 text-white-50 small">
                 © {new Date().getFullYear()} EduManager. Todos los derechos reservados.
               </p>

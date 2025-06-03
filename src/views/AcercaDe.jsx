@@ -78,7 +78,7 @@ const AcercaDe = () => {
               <div className="mb-4">
                 <h5 className="text-primary fw-bold mb-4 text-center">
                   <i className="bi bi-people-fill me-2"></i>
-                  Creadores de la Aplicación
+                  Desarrolladores de la Aplicación
                 </h5>
                 <div className="row g-3">
                   <div className="col-md-6">

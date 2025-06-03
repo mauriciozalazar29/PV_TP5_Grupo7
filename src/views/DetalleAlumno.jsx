@@ -25,23 +25,24 @@ const DetalleAlumno = ({ alumnos }) => {
             <strong>LU:</strong> <span className="ms-2">{alumno.id}</span>
           </div>
           <div className="col-md-6 mb-3">
-            <strong>Nombre:</strong> <span className="ms-2">{alumno.nombre}</span>
-          </div>
+            <strong>Email:</strong> <span className="ms-2">{alumno.email}</span>
+          </div> 
           <div className="col-md-6 mb-3">
             <strong>Apellido:</strong> <span className="ms-2">{alumno.apellido}</span>
           </div>
           <div className="col-md-6 mb-3">
-            <strong>Curso:</strong> <span className="ms-2">{alumno.curso}</span>
+            <strong>Teléfono:</strong> <span className="ms-2">{alumno.telefono}</span>
           </div>
           <div className="col-md-6 mb-3">
-            <strong>Email:</strong> <span className="ms-2">{alumno.email}</span>
+            <strong>Nombre:</strong> <span className="ms-2">{alumno.nombre}</span>
           </div>
           <div className="col-md-6 mb-3">
             <strong>Domicilio:</strong> <span className="ms-2">{alumno.domicilio}</span>
           </div>
           <div className="col-md-6 mb-3">
-            <strong>Teléfono:</strong> <span className="ms-2">{alumno.telefono}</span>
+            <strong>Curso:</strong> <span className="ms-2">{alumno.curso}</span>
           </div>
+          
         </div>
       </div>
     </div>

@@ -38,7 +38,7 @@ const NuevoAlumno = ({ alumnos, setAlumnos, navigate }) => {
     setAlumnos([...alumnos, form])
 
     // Redirigir con mensaje
-    navigate('/alumnos', { state: { mensaje: 'Alumno agregado correctamente.' } })
+    navigate('/alumnos', { state: { mensaje: 'Alumno cargado correctamente.' } })
   }
 
   return (

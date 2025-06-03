@@ -97,8 +97,8 @@ const EditarAlumno = ({ alumnos, setAlumnos, navigate }) => {
                 <option value="Primero">Primero</option>
                 <option value="Segundo">Segundo</option>
                 <option value="Tercero">Tercero</option>
-                <option value="Tercero">Cuarto</option>
-                <option value="Tercero">Quinto</option>
+                <option value="Cuarto">Cuarto</option>
+                <option value="Quinto">Quinto</option>
               </select>
             </div>
             <div className="mb-3 col-md-6">
